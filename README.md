@@ -66,9 +66,9 @@ fortris26/
 
 ## Contacto
 
-- Email: posicionadoenlaweb@gmail.com
-- GitHub: CallejaJ
-- Slack: #wallet-hereditaria
+- Email:
+- GitHub:
+- Slack:
 
 ---
 
