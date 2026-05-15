@@ -12,10 +12,6 @@ github_user: CallejaJ
 # Theme
 theme: jekyll-theme-minimal
 
-# URL Settings
-url: "https://CallejaJ.github.io"
-baseurl: "/fortris26"
-
 # Navigation
 markdown: kramdown
 permalink: /docs/:title/
