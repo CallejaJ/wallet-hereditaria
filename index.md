@@ -12,6 +12,7 @@ Investigación y desarrollo de solución de wallet criptográfica hereditaria ba
 - [Inicio](docs/inicio.md)
 - [Brainstorming Estratégico](docs/brainstorming.md)
 - [Especificación Técnica](docs/especificacion-tecnica.md)
+- [ERC-4337: EOA vs Smart Accounts](docs/erc4337-flujos.md) ⭐ **Nuevo**
 - [Roadmap: 4 Sprints](docs/roadmap.md)
 - [Tareas y Seguimiento](docs/tareas.md)
 - [Preguntas Pendientes](docs/preguntas-pendientes.md)
