@@ -2,7 +2,7 @@
 
 ## Contexto
 
-Fortris es una wallet de herencia digital. El plan original usaba ERC-4337 puro con un `InheritanceModule` custom. El profesor pide reutilizar **Safe** como infraestructura de smart account.
+Fortris es una wallet de herencia digital. El plan original usaba ERC-4337 puro con un `InheritanceModule` custom. Los tutores del proyecto de empresa piden reutilizar **Safe** como infraestructura de smart account.
 
 **Qué cambia con Safe:**
 - La smart account no se construye desde cero; se despliega una **Safe Account** estándar
