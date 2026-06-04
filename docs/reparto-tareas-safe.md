@@ -1,4 +1,4 @@
-# Reparto de Tareas: Implementación con Safe (6 semanas)
+# Planificación: Implementación con Safe (6 semanas)
 
 ## Contexto
 

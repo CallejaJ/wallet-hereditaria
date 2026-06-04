@@ -16,7 +16,7 @@ Investigación y desarrollo de solución de wallet criptográfica hereditaria ba
 - [Roadmap: 4 Sprints](docs/roadmap.md)
 - [Tareas y Seguimiento](docs/tareas.md)
 - [Preguntas Pendientes](docs/preguntas-pendientes.md)
-- [Reparto de Tareas: Implementación con Safe](docs/reparto-tareas-safe.md)
+- [Planificación: Implementación con Safe](docs/reparto-tareas-safe.md)
 
 ## Estado
 
