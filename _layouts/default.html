@@ -43,7 +43,7 @@
       </section>
     </div>
 
-    <!-- FOOTER  -->
+        <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         {% if site.github.is_project_page %}
@@ -52,5 +52,29 @@
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
+
+    <!-- Soporte para diagramas de Mermaid (como Gantt) -->
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: false });
+
+      document.addEventListener("DOMContentLoaded", async function() {
+        const elements = document.querySelectorAll('pre code.language-mermaid, div.language-mermaid pre');
+        elements.forEach((el) => {
+          const code = el.textContent || el.innerText;
+          const div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = code.trim();
+          
+          // Reemplaza el bloque de código original por el nuevo div para Mermaid
+          const parent = el.closest('.highlighter-rouge') || el.closest('pre');
+          parent.parentNode.replaceChild(div, parent);
+        });
+        
+        // Ejecuta el renderizado de Mermaid
+        await mermaid.run();
+      });
+    </script>
   </body>
 </html>
+
