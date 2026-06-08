@@ -6,7 +6,8 @@ import { Claim } from "./pages/Claim";
 import "./App.css";
 
 function App() {
-  const { ready, authenticated, user, login, logout, exportWallet } = usePrivy();
+  const { ready, authenticated, user, login, logout, exportWallet } =
+    usePrivy();
   const [activeTab, setActiveTab] = useState<
     "dashboard" | "register" | "claim"
   >("dashboard");
@@ -39,27 +40,28 @@ function App() {
 
         <div className="wallet-area">
           {!ready ? (
-            <button className="btn btn-connect" disabled>
+            <button type="button" className="btn btn-connect" disabled>
               <RefreshCw className="spin" /> Cargando...
             </button>
           ) : isConnected && address ? (
-            <div className="wallet-connected" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div className="wallet-connected connected-row">
               <span
-                className="address-display"
+                className="address-display address-clickable"
                 onClick={handleCopyAddress}
-                style={{ cursor: "pointer", textDecoration: "underline" }}
                 title="Haz clic para copiar la dirección completa"
               >
-                {copied ? "¡Copiado!" : `${address.slice(0, 6)}...${address.slice(-4)}`}
+                {copied
+                  ? "¡Copiado!"
+                  : `${address.slice(0, 6)}...${address.slice(-4)}`}
               </span>
               <button
-                className="btn btn-secondary btn-sm"
+                className="btn btn-secondary btn-sm btn-export"
                 onClick={exportWallet}
-                style={{ padding: "4px 8px", fontSize: "0.8rem", borderRadius: "4px" }}
               >
                 Exportar Clave
               </button>
               <button
+                type="button"
                 className="btn btn-disconnect"
                 onClick={() => void logout()}
               >
@@ -67,7 +69,11 @@ function App() {
               </button>
             </div>
           ) : (
-            <button className="btn btn-connect" onClick={() => void login()}>
+            <button
+              type="button"
+              className="btn btn-connect"
+              onClick={() => void login()}
+            >
               Iniciar Sesión / Conectar
             </button>
           )}
@@ -77,6 +83,7 @@ function App() {
       {/* MENÚ DE NAVEGACIÓN */}
       <nav className="tab-navigation">
         <button
+          type="button"
           className={`tab-btn ${activeTab === "dashboard" ? "active" : ""}`}
           onClick={() => setActiveTab("dashboard")}
         >

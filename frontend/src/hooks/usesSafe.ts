@@ -101,8 +101,19 @@ export function useSafe(safeAddress?: string) {
         );
         setIsModuleEnabled(isEnabled);
 
-        const pending = await apiKit.getPendingTransactions(safeAddress);
-        setPendingTxs(pending.results);
+        let pendingResults = [];
+        try {
+          const pending = await apiKit.getPendingTransactions(safeAddress);
+          pendingResults = pending.results;
+        } catch (err: any) {
+          // Si es un error 404, significa que la Safe es nueva o no está indexada aún
+          if (err.status === 404 || err.message?.includes("404") || String(err).includes("404")) {
+            console.info("Safe no indexada aún o sin transacciones en el Safe Transaction Service.");
+          } else {
+            console.warn("Error no crítico al recuperar transacciones pendientes:", err);
+          }
+        }
+        setPendingTxs(pendingResults);
       } catch (err) {
         console.error("Error al comprobar transacciones/módulos:", err);
       } finally {

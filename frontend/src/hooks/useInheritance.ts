@@ -22,18 +22,18 @@ const INHERITANCE_MODULE_ABI = parseAbi([
   "function executePayout() external",
 ]);
 
+// Cliente público estático para lecturas instantáneas en Sepolia (sin depender de Wagmi)
+const publicClient = createPublicClient({
+  chain: sepolia,
+  transport: http("https://ethereum-sepolia-rpc.publicnode.com"),
+});
+
 export function useInheritance(moduleAddress?: string) {
   const { user } = usePrivy();
   const address = user?.wallet?.address;
   const { wallets } = useWallets();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Cliente público estático para lecturas instantáneas en Sepolia (sin depender de Wagmi)
-  const publicClient = createPublicClient({
-    chain: sepolia,
-    transport: http("https://ethereum-sepolia-rpc.publicnode.com"),
-  });
 
   // Obtiene el cliente de firma de la wallet embebida de Privy
   const getWalletClient = async () => {

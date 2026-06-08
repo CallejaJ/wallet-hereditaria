@@ -127,7 +127,9 @@ export function Register() {
       setLoading(true);
       const inactivityThresholdSeconds = inactivityDays * 86400; // Días a segundos
 
-      const response = await fetch("http://localhost:3001/oracle/configure", {
+      const backendUrl =
+        import.meta.env.VITE_ORACLE_API_URL || "http://localhost:3001";
+      const response = await fetch(`${backendUrl}/oracle/configure`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

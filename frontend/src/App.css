@@ -649,3 +649,78 @@ body > div:not(#root) iframe {
   border-radius: 8px !important;
   overflow: hidden !important;
 }
+
+/* --- ESTILOS DE LA GUIA DE CONFIGURACION EN MODAL --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  background: var(--code-bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  max-width: 700px !important;
+  width: 100% !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  padding: 32px !important;
+  position: relative !important;
+  text-align: left !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: var(--text-h);
+}
+
+.guide-step {
+  margin-bottom: 24px;
+}
+
+.guide-step h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.guide-step p, .guide-step li {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.guide-code {
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--bg);
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  margin-top: 8px;
+  overflow-x: auto;
+  display: block;
+  word-break: break-all;
+}
