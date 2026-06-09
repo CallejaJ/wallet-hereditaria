@@ -708,7 +708,8 @@ body > div:not(#root) iframe {
   color: var(--accent);
 }
 
-.guide-step p, .guide-step li {
+.guide-step p,
+.guide-step li {
   font-size: 14px;
   line-height: 150%;
 }
@@ -807,16 +808,18 @@ body > div:not(#root) iframe {
   }
 
   .tab-navigation {
-    gap: 8px;
-    padding: 8px 12px;
-    overflow-x: auto;
+    gap: 0;
+    padding: 0 8px;
+    justify-content: space-between;
+    overflow-x: hidden;
   }
 
   .tab-btn {
-    padding: 8px 10px;
-    font-size: 13px;
+    padding: 10px 6px;
+    font-size: 12px;
     white-space: nowrap;
-    flex-shrink: 0;
+    flex: 1;
+    text-align: center;
   }
 
   .main-content-area {
