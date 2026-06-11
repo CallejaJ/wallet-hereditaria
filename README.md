@@ -74,6 +74,27 @@ Para optimizar la experiencia de usuario y eliminar la necesidad de que los here
 - **Frontend**: React 18, TypeScript 5, `@safe-global/protocol-kit`, `@safe-global/relay-kit`, `@safe-global/api-kit`, wagmi, viem
 - **Backend/Oráculo**: Node.js 20, TypeScript, validación de certificados PKI X.509
 - **Testnet**: Ethereum Sepolia Testnet
+## Documentación del Proyecto
+
+Toda la documentación conceptual, estratégica y técnica está disponible tanto en formato markdown local como compilada visualmente en el sitio de **GitHub Pages**:
+
+**Sitio Web de Documentación**: [https://callejaj.github.io/wallet-hereditaria/](https://callejaj.github.io/wallet-hereditaria/)
+
+### Índice de Guías y Especificaciones
+
+| Documento | Enlace GitHub Pages (Recomendado) | Enlace Archivo Local (Markdown) |
+| :--- | :--- | :--- |
+| **Guía de Despliegue de la dApp** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/GUIA_DESPLIEGUE.html) | [GUIA_DESPLIEGUE.md](GUIA_DESPLIEGUE.md) |
+| **Inicio y Concepto** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/inicio/) | [docs/inicio.md](docs/inicio.md) |
+| **Brainstorming Estratégico** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/brainstorming/) | [docs/brainstorming.md](docs/brainstorming.md) |
+| **Especificación Técnica** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/especificacion-tecnica/) | [docs/especificacion-tecnica.md](docs/especificacion-tecnica.md) |
+| **ERC-4337 (EOA vs Smart Accounts)** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/erc4337-flujos/) | [docs/erc4337-flujos.md](docs/erc4337-flujos.md) |
+| **Roadmap del Monorrepo** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/roadmap/) | [docs/roadmap.md](docs/roadmap.md) |
+| **Planificación y Arquitectura con Safe** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/planificacion/) | [docs/planificacion.md](docs/planificacion.md) |
+| **Presentación (Formato Slides/Obsidian)** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/presentacion-obsidian/) | [docs/presentacion-obsidian.md](docs/presentacion-obsidian.md) |
+| **Flujo Comparativo Detallado** | [Ver en GitHub Pages](https://callejaj.github.io/wallet-hereditaria/docs/ERC4337_EOA_vs_SmartAccounts/) | [docs/ERC4337_EOA_vs_SmartAccounts.md](docs/ERC4337_EOA_vs_SmartAccounts.md) |
+
+---
 
 ## Project Setup
 
